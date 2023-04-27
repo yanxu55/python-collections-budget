@@ -11,7 +11,7 @@ class BudgetList(list):
     def append(self, item):
         if self.sum_expenses + item < self.budget:
             # Path: corepy/python-collections-budget/budget/BudgetList.py
-            super().append(item)
+            self.expenses.append(item)
             self.sum_expenses += item
         else:
             # Path: corepy/python-collections-budget/budget/BudgetList.py
@@ -21,5 +21,4 @@ class BudgetList(list):
 
     def __len__(self):
         return len(self.expenses) + len(self.overages)
-    
     
